@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.top {
+    background-color: #00CCE4;
+    color: #FFF;
+    text-align: center;
+    padding: 2rem;
+}
+h1 {
+    font-size: 2.5rem;
+}
+.create-task {
+    position: relative;
+    margin: 1rem auto 0;
+    width: 36rem;
+    border-radius: 10px;
+}
+#title, #content {
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: inherit;
+    font-size: 1.5rem;
+}
+#title {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+#content {
+    margin-top: 0;
+    border-radius: 0 0 10px 10px;
+    resize: none;
+}
+#title:focus, #content:focus {
+    outline: none;
+}
+hr {
+    height: 1px;
+    width: 100%;
+    background-color: #00CCE4;
+    border: none;
+}
+.plus {
+    position: relative;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    padding: 0.3rem 0.8rem 0.2rem;
+    font-size: 2rem;
+    background-color: #00CCE4;
+    color: #FFF;
+    position: absolute;
+    bottom: 5px;
+    right: 7px;
+    transition: all ease-in-out 300ms;
+}
+.plus:hover {
+    background-color: #49ebfd;
+    cursor: pointer;
+}
+.plus:active {
+    bottom: -0.5px;
+}
+.task {
+    border: 2px solid #00CCE4;
+    position: relative;
+    margin: 1rem auto;
+    width: 33rem;
+    border-radius: 10px;
+}
+.task-title, .task-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+.task-title {
+    background-color: #00CCE4;
+    color: #FFF;
+}
+.task-content > p {
+    width: 90%;
+}
+.done-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    outline: 2px solid #00CCE4;
+    outline-offset: -5px;
+}
+.done-btn:hover {
+    background-color: #00CCE4;
+    outline-color: #FFF;
+    cursor: pointer;
+}
+.delete {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    color: #00CCE4;
+    font-size: 2rem;
+    margin-right: -2px;
+}
+.delete:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.delete:active {
+    top: 1px;
+}

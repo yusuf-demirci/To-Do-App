@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/97f6f8e3bf.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="top">
+        <h1>What to do?</h1>
+        <div class="create-task">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <hr>
+            <textarea name="content" id="content" cols="30" rows="2" placeholder="Content"></textarea>
+            <button class="plus">+</button>
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div class="tasks">
+            <!-- Created Tasks -->
+            <div class="task">
+                <div class="task-title">
+                    <p>${title}</p>
+                    <button class="done-btn"></button>
+                </div>
+                <hr>
+                <div class="task-content">
+                    <p>${content} asssfffgds </p>
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
