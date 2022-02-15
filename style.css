@@ -14,18 +14,20 @@ body {
     background-color: #00CCE4;
     color: #FFF;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0 1rem;
+
 }
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 .create-task {
     position: relative;
-    margin: 1rem auto 0;
+    margin: 0 auto;
     width: 36rem;
     border-radius: 10px;
 }
-#title, #content {
+#title, #message {
     width: 90%;
     margin: 1rem;
     padding: 1rem;
@@ -37,12 +39,12 @@ h1 {
     margin-bottom: 0;
     border-radius: 10px 10px 0 0;
 }
-#content {
+#message {
     margin-top: 0;
     border-radius: 0 0 10px 10px;
     resize: none;
 }
-#title:focus, #content:focus {
+#title:focus, #message:focus {
     outline: none;
 }
 hr {
@@ -71,54 +73,103 @@ hr {
 .plus:active {
     bottom: -0.5px;
 }
+.tasks {
+    width: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 1rem;
+}
 .task {
     border: 2px solid #00CCE4;
     position: relative;
     margin: 1rem auto;
-    width: 33rem;
+    width: 32.5rem;
     border-radius: 10px;
+    transition: ease-out 300ms;
 }
-.task-title, .task-content {
+.task-title, .task-message {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     border-radius: 10px 10px 0 0;
+    overflow: auto;
+}
+.task-title:focus, .task-message:focus {
+    outline: none;
 }
 .task-title {
     background-color: #00CCE4;
     color: #FFF;
+    font-weight: 700;
 }
-.task-content > p {
+.task-title > p {
+    margin-right: auto;
+}
+.task-message > p {
     width: 90%;
 }
-.done-btn {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 2px solid #FFF;
-    background-color: #FFF;
-    outline: 2px solid #00CCE4;
-    outline-offset: -5px;
-}
-.done-btn:hover {
-    background-color: #00CCE4;
-    outline-color: #FFF;
-    cursor: pointer;
-}
-.delete {
+
+.delete, .check, .edit {
     position: relative;
-    width: 2rem;
-    height: 2rem;
-    color: #00CCE4;
-    font-size: 2rem;
-    margin-right: -2px;
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-left: 1rem;
 }
-.delete:hover {
+.delete:hover, .check:hover, .edit:hover {
     cursor: pointer;
-    opacity: 0.6;
 }
-.delete:active {
+.delete:active, .check:active, .edit:active {
     top: 1px;
+}
+.done {
+    opacity: 0.5;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+@media screen and (max-width:1120px) {
+    .tasks {
+        width: 32.5rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:580px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .create-task {
+        width: 98%;   
+    }
+    .tasks {
+        padding: 0;
+        width: 100%;
+    }
+    .task {
+        width: 89%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .top {
+        padding-bottom: 2rem;
+    }
+    .plus {
+        bottom: -15px;
+        right: 42%;
+    }
+    .plus:active {
+        bottom: -15px;
+    }
+    .delete, .check, .edit {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+    }
 }

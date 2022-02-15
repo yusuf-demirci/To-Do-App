@@ -20,9 +20,9 @@
     <section class="top">
         <h1>What to do?</h1>
         <div class="create-task">
-            <input type="text" name="title" id="title" placeholder="Title">
+            <input type="text" name="title" id="title" placeholder="Title*" spellcheck="false">
             <hr>
-            <textarea name="content" id="content" cols="30" rows="2" placeholder="Content"></textarea>
+            <textarea name="content" id="message" cols="30" rows="2" placeholder="Content" spellcheck="false"></textarea>
             <button class="plus">+</button>
         </div>
     </section>
@@ -30,17 +30,22 @@
     <section class="bottom">
         <div class="tasks">
             <!-- Created Tasks -->
-            <div class="task">
-                <div class="task-title">
-                    <p>${title}</p>
-                    <button class="done-btn"></button>
-                </div>
-                <hr>
+            <!-- <div class="task">
                 <div class="task-content">
-                    <p>${content} asssfffgds </p>
-                    <i class="fa-solid fa-trash-can delete"></i>
+                    <div class="task-title">
+                        <p>${title}</p>
+                        <div class="task-control">
+                            <i class="fa-solid fa-square-check check"></i>
+                            <i class="fa-solid fa-pen-to-square edit"></i>
+                            <i class="fa-solid fa-trash-can delete"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="task-message">
+                        <p>${content} asssfffgds </p>
+                    </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
