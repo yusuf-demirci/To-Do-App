@@ -13,6 +13,10 @@ $(".plus").click(function () {
     message && (message = message[0].toUpperCase() + message.slice(1));
 
     // Create a task
+    // let div = document.createElement("div")
+    // div.classList = "task-content"
+    // let divTop = document.querySelector(".task")
+    // divTop.appendChild(div)
     $(
     `<div class="task">
         <div class="task-content">
@@ -37,8 +41,10 @@ $(".plus").click(function () {
 })
 
 $(document).on("click", ".check", function(e){
+    console.log(e)
     let parentElement = e.currentTarget.offsetParent;
     $(parentElement).toggleClass("done");
+    //parentElement.classList.toggle("done")
 })
 
 $(document).on("click", ".edit", function(e){
@@ -51,11 +57,16 @@ $(document).on("click", ".edit", function(e){
     else $([title, message]).attr("contenteditable", true)
 })
 
+// element.addEventListener("click", (e) => {
+// console.log(e)
+//})
+
 $(document).on("click", ".delete", function(e){
     let parentElement = e.currentTarget.offsetParent;
     $(parentElement).toggle("done");
 })
 
+// document.addEventListener("keydown", (e) => {})
 $(document).keydown((e) => {
     if (e.key === "Enter" || e.key === "NumpadEnter") $(".plus").click();
 })
