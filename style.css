@@ -96,7 +96,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: 7px 7px 0 0;
     overflow: auto;
 }
 .task-title:focus, .task-message:focus {
