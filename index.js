@@ -41,7 +41,6 @@ $(".plus").click(function () {
 })
 
 $(document).on("click", ".check", function(e){
-    console.log(e)
     let parentElement = e.currentTarget.offsetParent;
     $(parentElement).toggleClass("done");
     //parentElement.classList.toggle("done")
